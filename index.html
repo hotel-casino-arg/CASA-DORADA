@@ -30,7 +30,6 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.8
 .menu a{color:var(--cream);text-decoration:none;font-size:.73rem;letter-spacing:.16em;text-transform:uppercase}
 .menu a:hover{color:var(--amber2)}
 .burger{display:none;background:none;border:none;color:var(--amber2);font-size:1.6rem;cursor:pointer}
-/* hero */
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;align-items:center;padding-top:70px}
 .hx{padding:60px 60px 60px calc(max((100vw - 1250px)/2,22px) + 22px)}
 .hx h1{font-size:clamp(2.4rem,4.8vw,4rem);line-height:1.12}
@@ -43,7 +42,6 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.8
 .hp{position:relative}
 .hp img{position:absolute;inset:0}
 .hp::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--black) 0%,transparent 22%)}
-/* historia */
 .hist{padding:110px 0;background:var(--coal)}
 .hist .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .photos{position:relative}
@@ -53,7 +51,6 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.8
 .feat .ic{color:var(--amber);font-size:1.3rem}
 .feat h4{font-family:'Figtree',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;margin:10px 0 6px;color:var(--cream)}
 .feat p{font-size:.84rem;color:var(--mut)}
-/* platos de autor */
 .autor{padding:110px 0}
 .autor .head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:50px}
@@ -64,23 +61,20 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.8
 .dish h3{font-size:1.05rem}
 .dish .price{color:var(--amber);font-family:'Prata',serif;white-space:nowrap}
 .dish p{font-size:.84rem;color:var(--mut);margin-top:8px}
-/* menu lista */
 .carta{padding:0 0 110px}
 .carta .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
 .carta .ph{height:520px;position:sticky;top:100px}
 .mgroup{margin-bottom:40px}
 .mgroup h3{color:var(--amber);font-size:1.3rem;margin-bottom:14px}
-.mrow{display:flex;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(217,154,61,.15)}
+.mwrap{display:block}
+.mrow{display:flex;align-items:baseline;width:100%;padding:11px 0;border-bottom:1px solid rgba(217,154,61,.15)}
 .mrow h4{font-family:'Figtree',sans-serif;font-weight:500;font-size:.98rem}
 .mrow .dots{flex:1;border-bottom:2px dotted rgba(217,154,61,.4);margin:0 12px 5px}
 .mrow .price{color:var(--amber2);font-family:'Prata',serif;font-size:.9rem;white-space:nowrap}
-.mrow p{flex-basis:100%;color:var(--mut);font-size:.83rem}
-.mwrap{display:flex;flex-wrap:wrap}
-/* salon privado */
+.mwrap p{width:100%;color:var(--mut);font-size:.83rem;margin:8px 0 14px}
 .salon{position:relative;min-height:76vh;display:flex;align-items:center;background:linear-gradient(rgba(12,10,8,.72),rgba(12,10,8,.82)),url('2.jpg') center/cover}
 .salon .wrap{max-width:760px;text-align:center}
 .salon p{color:var(--mut);margin:16px 0 30px}
-/* casino */
 .casinoS{padding:110px 0;background:var(--coal)}
 .cbox2{border:1px solid var(--line);background:var(--black);display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:60px}
 .cbox2 .ph{height:400px}
@@ -88,8 +82,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.8
 .chips{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
 .chips span{border:1px solid var(--amber);padding:9px 18px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber2)}
 .note{font-size:.8rem;color:var(--mut);margin-top:16px}
-/* reserva */
-.reserva{padding:110px 0;background:var(--coal)}
+.reserva{padding:110px 0}
 .reserva .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .form input,.form select{background:var(--black);border:1px solid var(--line);color:var(--cream);padding:14px 16px;font-family:'Figtree',sans-serif;font-size:.92rem;width:100%}
@@ -98,7 +91,6 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.8
 .form input:focus,.form select:focus{outline:none;border-color:var(--amber)}
 .form .btn{grid-column:1/-1;justify-self:start}
 .ok{display:none;grid-column:1/-1;border:1px solid var(--amber);padding:18px 24px;color:var(--amber2)}
-/* footer */
 footer{background:#080604;padding:70px 0 30px;border-top:1px solid var(--line)}
 .fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:50px}
 .fgrid h4{color:var(--amber);letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;margin-bottom:16px}
@@ -150,8 +142,8 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
 <section class="hist" id="historia">
   <div class="wrap grid">
     <div class="photos">
-      <div class="big"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/30dec731f-937a-4a48-8208-26703874ab758984.png" alt="Nuestro chef"></div>
-      <div class="small"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/50dec731f-937a-4a48-8208-26703874ab757825.png" alt="Terminación de un plato"></div>
+      <div class="big"><img src="3.jpg" alt="Nuestro chef"></div>
+      <div class="small"><img src="4.jpg" alt="Terminación de un plato"></div>
     </div>
     <div>
       <div class="overline">Nuestra historia</div>
@@ -177,10 +169,10 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
       <a class="btn ghost" href="#carta">Ver carta completa</a>
     </div>
     <div class="cards">
-      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/40dec731f-937a-4a48-8208-26703874ab752458.png" alt="Vieiras doradas"></div><div class="tx"><div class="row"><h3>Vieiras doradas</h3><span class="price">$18.500</span></div><p>Manteca de trufa, coliflor asada y microgreens.</p></div></div>
-      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/50dec731f-937a-4a48-8208-26703874ab753968.png" alt="Wagyu a la brasa"></div><div class="tx"><div class="row"><h3>Wagyu a la brasa</h3><span class="price">$32.000</span></div><p>Papas andinas, rúcula y reducción de la casa.</p></div></div>
+      <div class="dish"><div class="ph"><img src="5.jpg" alt="Vieiras doradas"></div><div class="tx"><div class="row"><h3>Vieiras doradas</h3><span class="price">$18.500</span></div><p>Manteca de trufa, coliflor asada y microgreens.</p></div></div>
+      <div class="dish"><div class="ph"><img src="6.jpg" alt="Wagyu a la brasa"></div><div class="tx"><div class="row"><h3>Wagyu a la brasa</h3><span class="price">$32.000</span></div><p>Papas andinas, rúcula y reducción de la casa.</p></div></div>
       <div class="dish"><div class="ph"><img src="7.jpg" alt="Crema de calabaza"></div><div class="tx"><div class="row"><h3>Crema de calabaza</h3><span class="price">$14.500</span></div><p>Langostinos a la plancha y aceite de hierbas.</p></div></div>
-      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/40dec731f-937a-4a48-8208-26703874ab757744.png" alt="Trío de chocolate"></div><div class="tx"><div class="row"><h3>Trío de chocolate</h3><span class="price">$9.000</span></div><p>Frambuesas frescas y crocante de avellanas.</p></div></div>
+      <div class="dish"><div class="ph"><img src="8.jpg" alt="Trío de chocolate"></div><div class="tx"><div class="row"><h3>Trío de chocolate</h3><span class="price">$9.000</span></div><p>Frambuesas frescas y crocante de avellanas.</p></div></div>
     </div>
   </div>
 </section>
@@ -195,7 +187,7 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
         <h3>Entradas</h3>
         <div class="mwrap"><div class="mrow"><h4>Empanadas de bife cortado a cuchillo</h4><span class="dots"></span><span class="price">$9.500</span></div><p>Horno de barro, con chimichurri de la casa.</p></div>
         <div class="mwrap"><div class="mrow"><h4>Provoleta con miel de caña</h4><span class="dots"></span><span class="price">$8.000</span></div><p>Tomates secos y albahaca de la huerta.</p></div>
-        <div class="mwrap"><div class="mrow"><h4>Escabeche de langostinos</h4><span class="dots"></span><span class="price">$12.500</span></div><p>Cítricos patagónicos y hinojo fresco.</p></div>
+        <div class="mwrap"><div class="mrow"><h4>Escabeche de langostinos</h4><span class="dots"></span><span class="price">$12.500</span></div><p>Cítricos patagónicos e hinojo fresco.</p></div>
       </div>
       <div class="mgroup">
         <h3>Principales</h3>
