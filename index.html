@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Casa Dorada — Parrilla de autor | Palermo, Buenos Aires</title>
-<meta name="description" content="Cocina de fuego argentina en un salón de época: cortes premium, pastelería fina y una carta que cambia con las estaciones.">
+<title>Casa Dorada — Parrilla de autor & casino | Palermo, Buenos Aires</title>
+<meta name="description" content="Cocina de fuego argentina en un salón de época: cortes premium, pastelería fina y un salón de casino privado. Palermo, Buenos Aires.">
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--black:#0c0a08;--coal:#151210;--amber:#d99a3d;--amber2:#e9b566;--cream:#f4ecdd;--mut:#a89a86;--line:rgba(217,154,61,.3)}
@@ -80,6 +80,14 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.8
 .salon{position:relative;min-height:76vh;display:flex;align-items:center;background:linear-gradient(rgba(12,10,8,.72),rgba(12,10,8,.82)),url('2.jpg') center/cover}
 .salon .wrap{max-width:760px;text-align:center}
 .salon p{color:var(--mut);margin:16px 0 30px}
+/* casino */
+.casinoS{padding:110px 0;background:var(--coal)}
+.cbox2{border:1px solid var(--line);background:var(--black);display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:60px}
+.cbox2 .ph{height:400px}
+.badge18{display:inline-flex;width:52px;height:52px;border:1px solid var(--amber);border-radius:50%;align-items:center;justify-content:center;font-weight:700;color:var(--amber2);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.chips span{border:1px solid var(--amber);padding:9px 18px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber2)}
+.note{font-size:.8rem;color:var(--mut);margin-top:16px}
 /* reserva */
 .reserva{padding:110px 0;background:var(--coal)}
 .reserva .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
@@ -103,7 +111,7 @@ summary::after{content:"+";color:var(--amber)}
 details[open] summary::after{content:"–"}
 details p{color:var(--mut);font-size:.86rem;margin-top:12px}
 .copy{margin-top:34px;text-align:center;color:#6b5f4e;font-size:.78rem}
-@media(max-width:960px){.hero{grid-template-columns:1fr}.hx{padding:120px 22px 50px}.hp{min-height:60vh}.hp::after{background:linear-gradient(0deg,var(--black),transparent 30%)}.hist .grid,.carta .grid,.reserva .grid{grid-template-columns:1fr}.carta .ph{position:static;height:340px}.cards{grid-template-columns:1fr 1fr}.feats{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}.photos .small{right:0}.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;padding:26px;gap:18px;border-bottom:1px solid var(--line)}.menu.open{display:flex}.burger{display:block}}
+@media(max-width:960px){.hero{grid-template-columns:1fr}.hx{padding:120px 22px 50px}.hp{min-height:60vh}.hp::after{background:linear-gradient(0deg,var(--black),transparent 30%)}.hist .grid,.carta .grid,.reserva .grid,.cbox2{grid-template-columns:1fr}.carta .ph{position:static;height:340px}.cards{grid-template-columns:1fr 1fr}.feats{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}.photos .small{right:0}.cbox2{padding:40px 26px}.cbox2 .ph{height:300px}.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;padding:26px;gap:18px;border-bottom:1px solid var(--line)}.menu.open{display:flex}.burger{display:block}}
 @media(max-width:600px){.cards,.form,.fgrid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -114,7 +122,7 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
     <a class="logo" href="#inicio">CASA DORADA<small>PARRILLA DE AUTOR</small></a>
     <nav class="menu" id="menu">
       <a href="#historia">Historia</a><a href="#autor">Platos de autor</a><a href="#carta">Carta</a>
-      <a href="#salon">Salón privado</a><a href="#reserva">Reservas</a>
+      <a href="#casino">Casino</a><a href="#salon">Salón privado</a><a href="#reserva">Reservas</a>
     </nav>
     <a class="btn" href="#reserva" style="padding:11px 22px">Reservar mesa</a>
     <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
@@ -136,7 +144,7 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
       <span><b>✦</b>Pastelería propia</span>
     </div>
   </div>
-  <div class="hp"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/00dec731f-937a-4a48-8208-26703874ab752027.png" alt="Bife a la brasa de Casa Dorada"></div>
+  <div class="hp"><img src="1.jpg" alt="Bife a la brasa de Casa Dorada"></div>
 </section>
 
 <section class="hist" id="historia">
@@ -170,7 +178,7 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
     </div>
     <div class="cards">
       <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/40dec731f-937a-4a48-8208-26703874ab752458.png" alt="Vieiras doradas"></div><div class="tx"><div class="row"><h3>Vieiras doradas</h3><span class="price">$18.500</span></div><p>Manteca de trufa, coliflor asada y microgreens.</p></div></div>
-      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/50dec731f-937a-4a48-8208-26703874ab753968.png" alt="Wagyu a la brasa"></div><div class="tx"><div class="row"><h3>Wagyu a la brasa</h3><span class="price">$32.000</span></div><p>Papas andinas, rúcula y reducción de malbec.</p></div></div>
+      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/50dec731f-937a-4a48-8208-26703874ab753968.png" alt="Wagyu a la brasa"></div><div class="tx"><div class="row"><h3>Wagyu a la brasa</h3><span class="price">$32.000</span></div><p>Papas andinas, rúcula y reducción de la casa.</p></div></div>
       <div class="dish"><div class="ph"><img src="7.jpg" alt="Crema de calabaza"></div><div class="tx"><div class="row"><h3>Crema de calabaza</h3><span class="price">$14.500</span></div><p>Langostinos a la plancha y aceite de hierbas.</p></div></div>
       <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/40dec731f-937a-4a48-8208-26703874ab757744.png" alt="Trío de chocolate"></div><div class="tx"><div class="row"><h3>Trío de chocolate</h3><span class="price">$9.000</span></div><p>Frambuesas frescas y crocante de avellanas.</p></div></div>
     </div>
@@ -201,6 +209,22 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
         <div class="mwrap"><div class="mrow"><h4>Flan de dulce de leche de la casa</h4><span class="dots"></span><span class="price">$7.500</span></div><p>Crema batida y garrapiñada.</p></div>
         <div class="mwrap"><div class="mrow"><h4>Sorbete de limón y menta</h4><span class="dots"></span><span class="price">$6.500</span></div><p>Hecho cada mañana en la pastelería.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="casinoS" id="casino">
+  <div class="wrap">
+    <div class="cbox2">
+      <div>
+        <div class="badge18">+18</div>
+        <div class="overline">Salón de juegos</div>
+        <h2>La noche también <i>se juega</i></h2>
+        <p class="lead">Detrás de la boiserie de nogal, un salón privado de estilo clásico: mesas en vivo y slots premium con servicio de mesa dedicado.</p>
+        <div class="chips"><span>Ruleta en vivo</span><span>Blackjack</span><span>Póker caribeño</span><span>Slots premium</span></div>
+        <p class="note">Acceso exclusivo para mayores de 18 años. Jugá con moderación. Ver <a href="#legales" style="color:var(--amber2)">Política de Juego Responsable</a>.</p>
+      </div>
+      <div class="ph"><img src="10.jpg" alt="Salón de casino de Casa Dorada"></div>
     </div>
   </div>
 </section>
@@ -255,15 +279,17 @@ details p{color:var(--mut);font-size:.86rem;margin-top:12px}
       </div>
       <div>
         <h4>Atajos</h4>
-        <a href="#autor">Platos de autor</a><a href="#carta">Carta</a><a href="#salon">Salón privado</a><a href="#reserva">Reservas</a>
+        <a href="#autor">Platos de autor</a><a href="#carta">Carta</a><a href="#casino">Casino</a><a href="#salon">Salón privado</a><a href="#reserva">Reservas</a>
       </div>
     </div>
-    <div class="legales">
-      <details><summary>Política de Privacidad</summary><p>Casa Dorada S.R.L. trata los datos personales de conformidad con la Ley 25.326 de Protección de Datos Personales de la República Argentina. Los datos del formulario de reservas se utilizan exclusivamente para gestionar la reserva y contactar al cliente. Podés ejercer tus derechos escribiendo a privacidad@casadorada.com.ar.</p></details>
+    <div class="legales" id="legales">
+      <details><summary>Política de Privacidad</summary><p>Casa Dorada S.R.L. trata los datos personales de conformidad con la Ley 25.326 de Protección de Datos Personales de la República Argentina. Los datos del formulario de reservas se utilizan exclusivamente para gestionar la reserva y contactar al cliente. Podés ejercer tus derechos de acceso, rectificación y supresión escribiendo a privacidad@casadorada.com.ar. No vendemos ni cedemos datos a terceros.</p></details>
       <details><summary>Términos y Condiciones</summary><p>Las reservas se confirman por email dentro de las 2 horas hábiles. Los precios de la carta pueden actualizarse sin previo aviso. La mesa se mantiene 15 minutos pasado el horario de la reserva. Los contenidos de este sitio tienen carácter informativo.</p></details>
-      <details><summary>Política de Cookies</summary><p>Este sitio utiliza cookies técnicas necesarias para su funcionamiento y cookies analíticas anónimas. Podés bloquearlas o eliminarlas en cualquier momento desde tu navegador; en tal caso, algunas funciones podrían no estar disponibles.</p></details>
+      <details><summary>Política de Cookies</summary><p>Este sitio utiliza cookies técnicas necesarias para su funcionamiento y cookies analíticas anónimas para mejorar la experiencia. Podés configurar tu navegador para bloquearlas o eliminarlas en cualquier momento; en tal caso, algunas funciones podrían no estar disponibles. Al continuar navegando, aceptás el uso de cookies según esta política.</p></details>
+      <details><summary>Política de Juego Responsable (+18)</summary><p>El salón de juegos de Casa Dorada es un espacio de entretenimiento exclusivo para mayores de 18 años. Promovemos el juego responsable: jugá con moderación y nunca por encima de tus posibilidades. El personal está capacitado para asistir a quien lo solicite y para limitar el acceso ante signos de juego problemático. Prohibida la participación de menores. Contacto: juegoresponsable@casadorada.com.ar.</p></details>
+      <details><summary>Reservas y Cancelaciones</summary><p>Las reservas pueden cancelarse sin cargo hasta 4 horas antes del horario confirmado. Para el salón privado, la seña se reintegra íntegra con 48 horas de anticipación. Con menos margen, puede convertirse en crédito para otra fecha dentro de los 30 días.</p></details>
     </div>
-    <div class="copy">© 2026 Casa Dorada S.R.L. · Palermo, Buenos Aires · Todos los derechos reservados</div>
+    <div class="copy">© 2026 Casa Dorada S.R.L. · Palermo, Buenos Aires · Todos los derechos reservados · +18 Jugá con moderación</div>
   </div>
 </footer>
 
