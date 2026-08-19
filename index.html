@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Dorada — Parrilla de autor | Palermo, Buenos Aires</title>
+<meta name="description" content="Cocina de fuego argentina en un salón de época: cortes premium, pastelería fina y una carta que cambia con las estaciones.">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0c0a08;--coal:#151210;--amber:#d99a3d;--amber2:#e9b566;--cream:#f4ecdd;--mut:#a89a86;--line:rgba(217,154,61,.3)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;background:var(--black);color:var(--cream);line-height:1.65}
+h1,h2,h3,.serif{font-family:'Prata',Georgia,serif;font-weight:400}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1150px;margin:0 auto;padding:0 22px}
+.overline{letter-spacing:.32em;text-transform:uppercase;font-size:.68rem;color:var(--amber);margin-bottom:14px}
+h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+h2 i{color:var(--amber);font-style:italic}
+.lead{color:var(--mut);max-width:620px;margin-top:14px}
+.btn{display:inline-block;background:var(--amber);color:#171106;padding:14px 30px;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--amber2)}
+.btn.ghost{background:transparent;color:var(--amber2);border:1px solid var(--amber)}
+.btn.ghost:hover{background:rgba(217,154,61,.12)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,10,8,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 26px;max-width:1250px;margin:auto}
+.logo{display:flex;flex-direction:column;line-height:1.1;color:var(--cream);text-decoration:none;font-family:'Prata',serif;font-size:1.15rem;letter-spacing:.2em}
+.logo small{font-family:'Figtree',sans-serif;font-size:.55rem;letter-spacing:.5em;color:var(--amber)}
+.menu{display:flex;gap:24px}
+.menu a{color:var(--cream);text-decoration:none;font-size:.73rem;letter-spacing:.16em;text-transform:uppercase}
+.menu a:hover{color:var(--amber2)}
+.burger{display:none;background:none;border:none;color:var(--amber2);font-size:1.6rem;cursor:pointer}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;align-items:center;padding-top:70px}
+.hx{padding:60px 60px 60px calc(max((100vw - 1250px)/2,22px) + 22px)}
+.hx h1{font-size:clamp(2.4rem,4.8vw,4rem);line-height:1.12}
+.hx h1 i{color:var(--amber)}
+.hx .lead{margin-bottom:32px}
+.cta{display:flex;gap:16px;flex-wrap:wrap}
+.badges{display:flex;gap:34px;flex-wrap:wrap;margin-top:44px;border-top:1px solid var(--line);padding-top:22px}
+.badges span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.badges b{color:var(--amber);margin-right:8px}
+.hp{position:relative}
+.hp img{position:absolute;inset:0}
+.hp::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--black) 0%,transparent 22%)}
+/* historia */
+.hist{padding:110px 0;background:var(--coal)}
+.hist .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.photos{position:relative}
+.photos .big{height:480px}
+.photos .small{position:absolute;right:-26px;bottom:-26px;width:46%;height:220px;border:6px solid var(--coal);box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:34px 0}
+.feat .ic{color:var(--amber);font-size:1.3rem}
+.feat h4{font-family:'Figtree',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;margin:10px 0 6px;color:var(--cream)}
+.feat p{font-size:.84rem;color:var(--mut)}
+/* platos de autor */
+.autor{padding:110px 0}
+.autor .head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:50px}
+.dish{background:var(--coal);border:1px solid var(--line)}
+.dish .ph{height:200px}
+.dish .tx{padding:22px}
+.dish .row{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.dish h3{font-size:1.05rem}
+.dish .price{color:var(--amber);font-family:'Prata',serif;white-space:nowrap}
+.dish p{font-size:.84rem;color:var(--mut);margin-top:8px}
+/* menu lista */
+.carta{padding:0 0 110px}
+.carta .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.carta .ph{height:520px;position:sticky;top:100px}
+.mgroup{margin-bottom:40px}
+.mgroup h3{color:var(--amber);font-size:1.3rem;margin-bottom:14px}
+.mrow{display:flex;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(217,154,61,.15)}
+.mrow h4{font-family:'Figtree',sans-serif;font-weight:500;font-size:.98rem}
+.mrow .dots{flex:1;border-bottom:2px dotted rgba(217,154,61,.4);margin:0 12px 5px}
+.mrow .price{color:var(--amber2);font-family:'Prata',serif;font-size:.9rem;white-space:nowrap}
+.mrow p{flex-basis:100%;color:var(--mut);font-size:.83rem}
+.mwrap{display:flex;flex-wrap:wrap}
+/* salon privado */
+.salon{position:relative;min-height:76vh;display:flex;align-items:center;background:linear-gradient(rgba(12,10,8,.72),rgba(12,10,8,.82)),url('2.jpg') center/cover}
+.salon .wrap{max-width:760px;text-align:center}
+.salon p{color:var(--mut);margin:16px 0 30px}
+/* reserva */
+.reserva{padding:110px 0;background:var(--coal)}
+.reserva .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form input,.form select{background:var(--black);border:1px solid var(--line);color:var(--cream);padding:14px 16px;font-family:'Figtree',sans-serif;font-size:.92rem;width:100%}
+.form select option{background:var(--black)}
+.form .full{grid-column:1/-1}
+.form input:focus,.form select:focus{outline:none;border-color:var(--amber)}
+.form .btn{grid-column:1/-1;justify-self:start}
+.ok{display:none;grid-column:1/-1;border:1px solid var(--amber);padding:18px 24px;color:var(--amber2)}
+/* footer */
+footer{background:#080604;padding:70px 0 30px;border-top:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:50px}
+.fgrid h4{color:var(--amber);letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;margin-bottom:16px}
+.fgrid p,.fgrid a{color:var(--mut);font-size:.9rem;text-decoration:none;display:block;margin-bottom:8px}
+.fgrid a:hover{color:var(--amber2)}
+.legales{margin-top:50px;border-top:1px solid rgba(255,255,255,.08);padding-top:26px}
+details{border-bottom:1px solid rgba(255,255,255,.08);padding:13px 0}
+summary{cursor:pointer;color:var(--cream);letter-spacing:.08em;font-size:.95rem;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--amber)}
+details[open] summary::after{content:"–"}
+details p{color:var(--mut);font-size:.86rem;margin-top:12px}
+.copy{margin-top:34px;text-align:center;color:#6b5f4e;font-size:.78rem}
+@media(max-width:960px){.hero{grid-template-columns:1fr}.hx{padding:120px 22px 50px}.hp{min-height:60vh}.hp::after{background:linear-gradient(0deg,var(--black),transparent 30%)}.hist .grid,.carta .grid,.reserva .grid{grid-template-columns:1fr}.carta .ph{position:static;height:340px}.cards{grid-template-columns:1fr 1fr}.feats{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}.photos .small{right:0}.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;padding:26px;gap:18px;border-bottom:1px solid var(--line)}.menu.open{display:flex}.burger{display:block}}
+@media(max-width:600px){.cards,.form,.fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#inicio">CASA DORADA<small>PARRILLA DE AUTOR</small></a>
+    <nav class="menu" id="menu">
+      <a href="#historia">Historia</a><a href="#autor">Platos de autor</a><a href="#carta">Carta</a>
+      <a href="#salon">Salón privado</a><a href="#reserva">Reservas</a>
+    </nav>
+    <a class="btn" href="#reserva" style="padding:11px 22px">Reservar mesa</a>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hx">
+    <div class="overline">Bienvenidos a Casa Dorada · Palermo</div>
+    <h1>Donde el fuego se vuelve <i>elegancia</i></h1>
+    <p class="lead">Cocina de brasa argentina en un salón de época: cortes premium, mariscos del sur y pastelería fina, a dos cuadras de los lagos de Palermo.</p>
+    <div class="cta">
+      <a class="btn" href="#carta">Ver la carta</a>
+      <a class="btn ghost" href="#reserva">Reservar mesa</a>
+    </div>
+    <div class="badges">
+      <span><b>✦</b>Carbón de quebracho</span>
+      <span><b>✦</b>Cortes premium</span>
+      <span><b>✦</b>Pastelería propia</span>
+    </div>
+  </div>
+  <div class="hp"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/00dec731f-937a-4a48-8208-26703874ab752027.png" alt="Bife a la brasa de Casa Dorada"></div>
+</section>
+
+<section class="hist" id="historia">
+  <div class="wrap grid">
+    <div class="photos">
+      <div class="big"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/30dec731f-937a-4a48-8208-26703874ab758984.png" alt="Nuestro chef"></div>
+      <div class="small"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/50dec731f-937a-4a48-8208-26703874ab757825.png" alt="Terminación de un plato"></div>
+    </div>
+    <div>
+      <div class="overline">Nuestra historia</div>
+      <h2>Una pasión por el <i>fuego</i></h2>
+      <p class="lead">Desde 2012 cocinamos como se hacía antes: brasa lenta, producto de estación y una sola regla — que cada plato llegue a la mesa en su punto exacto.</p>
+      <div class="feats">
+        <div class="feat"><div class="ic">♨</div><h4>Cocina de brasa</h4><p>Quebracho blanco y hierro fundido, como en el campo.</p></div>
+        <div class="feat"><div class="ic">❖</div><h4>Producto de estación</h4><p>Feria de Mataderos y pesquerías del sur, cada mañana.</p></div>
+        <div class="feat"><div class="ic">✦</div><h4>Salón de época</h4><p>Boiserie de nogal y cristales de 1928, restaurados a mano.</p></div>
+      </div>
+      <a class="btn ghost" href="#carta">Conocer la carta</a>
+    </div>
+  </div>
+</section>
+
+<section class="autor" id="autor">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="overline">Especialidades</div>
+        <h2>Platos de <i>autor</i></h2>
+      </div>
+      <a class="btn ghost" href="#carta">Ver carta completa</a>
+    </div>
+    <div class="cards">
+      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/40dec731f-937a-4a48-8208-26703874ab752458.png" alt="Vieiras doradas"></div><div class="tx"><div class="row"><h3>Vieiras doradas</h3><span class="price">$18.500</span></div><p>Manteca de trufa, coliflor asada y microgreens.</p></div></div>
+      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/50dec731f-937a-4a48-8208-26703874ab753968.png" alt="Wagyu a la brasa"></div><div class="tx"><div class="row"><h3>Wagyu a la brasa</h3><span class="price">$32.000</span></div><p>Papas andinas, rúcula y reducción de malbec.</p></div></div>
+      <div class="dish"><div class="ph"><img src="7.jpg" alt="Crema de calabaza"></div><div class="tx"><div class="row"><h3>Crema de calabaza</h3><span class="price">$14.500</span></div><p>Langostinos a la plancha y aceite de hierbas.</p></div></div>
+      <div class="dish"><div class="ph"><img src="https://image.qwenlm.ai/public_source/0ec36ff3-ebee-468e-b7ed-0a6678d13f6f/40dec731f-937a-4a48-8208-26703874ab757744.png" alt="Trío de chocolate"></div><div class="tx"><div class="row"><h3>Trío de chocolate</h3><span class="price">$9.000</span></div><p>Frambuesas frescas y crocante de avellanas.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="carta" id="carta">
+  <div class="wrap grid">
+    <div class="ph"><img src="9.jpg" alt="Empanadas de bife"></div>
+    <div>
+      <div class="overline">La carta</div>
+      <h2>Para compartir <i>sin apuro</i></h2>
+      <div class="mgroup" style="margin-top:34px">
+        <h3>Entradas</h3>
+        <div class="mwrap"><div class="mrow"><h4>Empanadas de bife cortado a cuchillo</h4><span class="dots"></span><span class="price">$9.500</span></div><p>Horno de barro, con chimichurri de la casa.</p></div>
+        <div class="mwrap"><div class="mrow"><h4>Provoleta con miel de caña</h4><span class="dots"></span><span class="price">$8.000</span></div><p>Tomates secos y albahaca de la huerta.</p></div>
+        <div class="mwrap"><div class="mrow"><h4>Escabeche de langostinos</h4><span class="dots"></span><span class="price">$12.500</span></div><p>Cítricos patagónicos y hinojo fresco.</p></div>
+      </div>
+      <div class="mgroup">
+        <h3>Principales</h3>
+        <div class="mwrap"><div class="mrow"><h4>Bife de chorizo a la brasa</h4><span class="dots"></span><span class="price">$24.000</span></div><p>400 g, sal de campo y papas al plomo.</p></div>
+        <div class="mwrap"><div class="mrow"><h4>Cordero patagónico 12 horas</h4><span class="dots"></span><span class="price">$26.500</span></div><p>Cocción lenta, puré de zanahoria asada.</p></div>
+        <div class="mwrap"><div class="mrow"><h4>Merluza negra de profundidad</h4><span class="dots"></span><span class="price">$23.000</span></div><p>Beurre blanc de limón y espárragos.</p></div>
+        <div class="mwrap"><div class="mrow"><h4>Risotto de hongos de pinar</h4><span class="dots"></span><span class="price">$17.500</span></div><p>Queso de cabra y avellanas tostadas.</p></div>
+      </div>
+      <div class="mgroup">
+        <h3>Postres</h3>
+        <div class="mwrap"><div class="mrow"><h4>Flan de dulce de leche de la casa</h4><span class="dots"></span><span class="price">$7.500</span></div><p>Crema batida y garrapiñada.</p></div>
+        <div class="mwrap"><div class="mrow"><h4>Sorbete de limón y menta</h4><span class="dots"></span><span class="price">$6.500</span></div><p>Hecho cada mañana en la pastelería.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="salon" id="salon">
+  <div class="wrap">
+    <div class="overline">Salón privado</div>
+    <h2>La boiserie de 1928, <i>solo para ustedes</i></h2>
+    <p>Mesas de 8 a 40 cubiertos bajo la araña de cristal, con menú cerrado y servicio dedicado. Cumpleaños, aniversarios y cenas de empresa.</p>
+    <a class="btn" href="#reserva">Consultar disponibilidad</a>
+  </div>
+</section>
+
+<section class="reserva" id="reserva">
+  <div class="wrap grid">
+    <div>
+      <div class="overline">Reservas</div>
+      <h2>Reservá tu <i>mesa</i></h2>
+      <p class="lead">Te confirmamos por email dentro de las 2 horas. Para grupos de más de 8, escribinos directamente y te proponemos el salón privado.</p>
+    </div>
+    <form class="form" id="form">
+      <input type="text" placeholder="Nombre y apellido" required>
+      <input type="email" placeholder="Email" required>
+      <input type="date" required aria-label="Fecha">
+      <select required><option value="">Hora…</option><option>19:00</option><option>20:00</option><option>21:00</option><option>22:00</option><option>23:00</option></select>
+      <select required class="full"><option value="">Personas…</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <button class="btn" type="submit">Enviar reserva</button>
+      <div class="ok" id="ok">¡Gracias! Tu pedido de reserva fue enviado. Te confirmamos por email dentro de las 2 horas.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="#inicio" style="margin-bottom:14px">CASA DORADA<small>PARRILLA DE AUTOR</small></a>
+        <p>Cocina de fuego argentina en un salón de época. Palermo, Buenos Aires.</p>
+      </div>
+      <div>
+        <h4>Horarios</h4>
+        <p>Martes a jueves · 19:00–24:00</p>
+        <p>Vie y sáb · 19:00–01:00</p>
+        <p>Domingo · 12:00–16:00</p>
+        <p>Lunes cerrado</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Gorriti 4400, Palermo</p>
+        <a href="tel:+541155550100">+54 11 5555-0100</a>
+        <a href="mailto:hola@casadorada.com.ar">hola@casadorada.com.ar</a>
+      </div>
+      <div>
+        <h4>Atajos</h4>
+        <a href="#autor">Platos de autor</a><a href="#carta">Carta</a><a href="#salon">Salón privado</a><a href="#reserva">Reservas</a>
+      </div>
+    </div>
+    <div class="legales">
+      <details><summary>Política de Privacidad</summary><p>Casa Dorada S.R.L. trata los datos personales de conformidad con la Ley 25.326 de Protección de Datos Personales de la República Argentina. Los datos del formulario de reservas se utilizan exclusivamente para gestionar la reserva y contactar al cliente. Podés ejercer tus derechos escribiendo a privacidad@casadorada.com.ar.</p></details>
+      <details><summary>Términos y Condiciones</summary><p>Las reservas se confirman por email dentro de las 2 horas hábiles. Los precios de la carta pueden actualizarse sin previo aviso. La mesa se mantiene 15 minutos pasado el horario de la reserva. Los contenidos de este sitio tienen carácter informativo.</p></details>
+      <details><summary>Política de Cookies</summary><p>Este sitio utiliza cookies técnicas necesarias para su funcionamiento y cookies analíticas anónimas. Podés bloquearlas o eliminarlas en cualquier momento desde tu navegador; en tal caso, algunas funciones podrían no estar disponibles.</p></details>
+    </div>
+    <div class="copy">© 2026 Casa Dorada S.R.L. · Palermo, Buenos Aires · Todos los derechos reservados</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.style.display='none';
+  document.getElementById('ok').style.display='block';
+});
+</script>
+</body>
+</html>
